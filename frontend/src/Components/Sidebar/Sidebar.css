@@ -1,0 +1,41 @@
+.importModel {
+  /* background-color: rgb(218, 218, 190); */
+  padding: 10px 40px;
+  height: 8vh;
+  /* position:sticky;
+  top: 0px; */
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+.upload-btn {
+  background-color: transparent;
+  border: 0.125rem dashed hsla(223, 10%, 50%, 0.4);
+  flex: 1;
+  padding: 0.375rem 2rem;
+}
+
+.upload-btn:hover {
+  background-color: hsla(223, 10%, 60%, 0.2);
+}
+.inputText {
+  margin-top: 11px;
+}
+
+.sidebarContainer {
+  /* background-color: rgb(237, 231, 231); */
+  padding: 10px 55px;
+  position: sticky;
+  top: 20px;
+  height: 70vh  ;
+  /* margin-top: -10px; */
+  border-right: 1px solid #1D5588;
+}
+
+.sidebarItem {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 10px 0px 25px 0px;
+}
