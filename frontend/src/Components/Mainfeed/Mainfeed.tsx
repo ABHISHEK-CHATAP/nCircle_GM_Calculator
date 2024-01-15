@@ -2,6 +2,7 @@ import * as React from 'react';
 import "./Mainfeed.css"
 import { Box } from '@mui/material';
 import { FixedPriceFp, TimeFixed,TimeMTimeM,FixedTime, House , FixedPriceFpHybrid, FixedTimeHybrid, TimeFixedHybrid, TimeTimeHybrid } from '../../Assets';
+import Calculator from '../Calculatator/Calculator';
 
 
 
@@ -19,9 +20,8 @@ const MainFeed: React.FunctionComponent<IMainFeedProps> = ({firstSelect,secondSe
   return (
     <>
     <Box className="BodyDiv">
-    <h1>Body</h1>
     <br/>
-
+    {/* <FixedPriceFp/> */}
      {/* Out-Sourced   */}
      {selectModel== "Outsource" && firstSelect == "Fixed_Price" && secondSelect == "Fixed_Price" && <FixedPriceFp/>}
      { selectModel== "Outsource" && firstSelect == "Fixed_Price" && secondSelect == "Time_Material" && <FixedTime/>}
@@ -36,6 +36,7 @@ const MainFeed: React.FunctionComponent<IMainFeedProps> = ({firstSelect,secondSe
      { selectModel== "Hybrid" && firstSelect == "Time_Material" && secondSelect == "Time_Material" && <TimeTimeHybrid/>}
 
 
+   <Calculator/>
     </Box>
     
     

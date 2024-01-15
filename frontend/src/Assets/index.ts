@@ -6,6 +6,6 @@ export {default as FixedTime} from  "../Assets/Outsourse/FixedTime/FixedTime";
 export {default as House} from "./Inhouse/House"
 
 export {default as FixedPriceFpHybrid} from "../Assets/Hybrid/FixedpriceFp/FixedPriceFp";
-export {default as  FixedTimeHybrid} from "../Assets/Hybrid/FixedTime/fixedTime";
+export {default as  FixedTimeHybrid} from "../Assets/Hybrid/FixedTime/FixedTime";
 export {default as TimeFixedHybrid} from "./Hybrid/TimeFixed/TimeFixed";
-export {default as TimeTimeHybrid} from "./Hybrid/timeMTimeM/TimeMTimeM";
+export {default as TimeTimeHybrid} from "./Hybrid/timeMTimeM/TimeMTimeM"

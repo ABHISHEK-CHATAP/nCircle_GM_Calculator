@@ -1,13 +1,13 @@
 .importModel {
   /* background-color: rgb(218, 218, 190); */
   padding: 10px 40px;
-  height: 8vh;
+  height: 11vh;
   /* position:sticky;
   top: 0px; */
   margin-top: 30px;
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+
 }
 .upload-btn {
   background-color: transparent;
@@ -29,8 +29,8 @@
   position: sticky;
   top: 20px;
   height: 70vh  ;
-  /* margin-top: -10px; */
-  border-right: 1px solid #1D5588;
+  /* margin-top: 10px; */
+  /* border-right: 1px solid #1D5588; */
 }
 
 .sidebarItem {

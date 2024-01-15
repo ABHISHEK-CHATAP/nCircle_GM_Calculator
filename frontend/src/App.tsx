@@ -1,6 +1,6 @@
 import * as React from "react";
 import SideBar from "./Components/Sidebar/Sidebar";
-import {  Container, CssBaseline, Grid } from '@mui/material';
+import {  Container, CssBaseline, Grid, Paper } from '@mui/material';
 import MainFeed from "./Components/Mainfeed/Mainfeed";
 import Navbar from "./Components/Navbar/Navbar";
 
@@ -21,7 +21,7 @@ const App: React.FunctionComponent<IAppProps> = (_props) => {
     <Navbar/>
       <Container maxWidth="xl">
         {/* <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} > */}
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
         <Grid item xs={3}>
         <SideBar firstSelect={firstSelect} setFirstSelect={setFirstSelect}
          secondSelect={secondSelect} setSecondSelect={setSecondSelect}
