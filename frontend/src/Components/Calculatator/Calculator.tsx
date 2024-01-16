@@ -8,7 +8,7 @@ const Calculator: React.FunctionComponent<ICalculatorProps> = (_props) => {
   return (
     <>
     
-    <Paper sx={{display:"flex", justifyContent:"space-between", alignItems:"center", padding:2,  mt:4}} elevation={10}>
+    <Paper sx={{display:"flex", justifyContent:"space-between", alignItems:"center",padding:2,  mt:3, }} elevation={10}>
         <Box sx={{display:"flex",gap:3, alignItems:"center"}}>
             <Button variant='contained'>Gross Margin %</Button>
             <span> = </span>

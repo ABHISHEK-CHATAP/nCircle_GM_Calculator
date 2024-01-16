@@ -1,10 +1,14 @@
+.paperModel{
+/* position: absolute; */
+z-index: -1;
+}
 .importModel {
   /* background-color: rgb(218, 218, 190); */
-  padding: 10px 40px;
+  padding: 40px 40px;
   height: 11vh;
   /* position:sticky;
   top: 0px; */
-  margin-top: 30px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
 
@@ -25,7 +29,7 @@
 
 .sidebarContainer {
   /* background-color: rgb(237, 231, 231); */
-  padding: 10px 55px;
+  padding: 20px 55px;
   position: sticky;
   top: 20px;
   height: 70vh  ;

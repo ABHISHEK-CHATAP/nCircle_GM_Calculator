@@ -20,6 +20,7 @@ const SideBar: React.FunctionComponent<ISideBarProps> = ({firstSelect,setFirstSe
 
   return (
     <>
+     <Paper elevation={6} className='paperModel'>
     <Box className="importModel">
       <form >
       <label  className="button upload-btn">Import Excel File
@@ -31,7 +32,7 @@ const SideBar: React.FunctionComponent<ISideBarProps> = ({firstSelect,setFirstSe
     </Box>
 
     {/* ------------sidebar ----------- */}
-     <Paper elevation={5}>
+    
       <Box className="sidebarContainer">
        <Box className="sidebarItem">
        <TextField  label="sow no" fullWidth  variant="standard" />

@@ -3,6 +3,7 @@ import SideBar from "./Components/Sidebar/Sidebar";
 import {  Container, CssBaseline, Grid, Paper } from '@mui/material';
 import MainFeed from "./Components/Mainfeed/Mainfeed";
 import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
 
 
 interface IAppProps {}
@@ -34,6 +35,8 @@ const App: React.FunctionComponent<IAppProps> = (_props) => {
         </Grid>
         {/* </Box> */}
       </Container>
+      {/* footer  */}
+      <Footer/>
   
   
   

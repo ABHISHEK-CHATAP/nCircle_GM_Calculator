@@ -1,6 +1,7 @@
 import * as React from 'react';
 import "./FpFp.css"
 import { Box, MenuItem, Paper, TextField, Typography } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 
 interface IFixedPriceFpProps {
 }
@@ -9,7 +10,9 @@ const FixedPriceFp: React.FunctionComponent<IFixedPriceFpProps> = (_props) => {
   const [month, setMonth] = React.useState("")
   return (
     <>
-    <Paper elevation={5} sx={{padding:"30px 0px"}}>
+
+    {/* Client details  */}
+    <Paper elevation={5} sx={{padding:"20px 0px", height:"18vh"}}>
     <Box sx={{padding:"0 50px"}} >
       <Box>
         <Typography variant='h6' sx={{fontSize:14,fontWeight:"bold"}}>Client Details </Typography>
@@ -30,7 +33,8 @@ const FixedPriceFp: React.FunctionComponent<IFixedPriceFpProps> = (_props) => {
     </Box>
     </Paper>
 
-    <Paper elevation={10} sx={{padding:"30px 0px", mt:3}}>
+    {/* vendor Details  */}
+    <Paper elevation={10} sx={{padding:"20px 0px", mt:3, height:"35vh",}} className='scroll'>
     <Box sx={{padding:"0 50px"}} >
       <Box>
         <Typography variant='h6' sx={{fontSize:14,fontWeight:"bold"}}>Vendor Details </Typography>
@@ -61,6 +65,7 @@ const FixedPriceFp: React.FunctionComponent<IFixedPriceFpProps> = (_props) => {
       </Box>
       </Box>
 
+
       {/* team lead  */}
       <Box sx={{marginTop:3}}>
       <Box>
@@ -73,6 +78,21 @@ const FixedPriceFp: React.FunctionComponent<IFixedPriceFpProps> = (_props) => {
       </Box>
       </Box>
 
+    </Box>
+    </Paper>
+
+    {/* out-sourced cost additional */}
+    <Paper elevation={5} sx={{padding:"20px 0px", height:"13vh", mt:2, }} className='scroll'>
+    <Box sx={{padding:"0 50px"}} >
+      <Box>
+        <Typography variant='h6' sx={{fontSize:14,fontWeight:"bold"}}>Additional cost <small>( optional )</small> </Typography>
+      </Box>
+      <Box sx={{display:"flex",gap:10, }}>
+      <TextField id="additional-cost-Name" label="Name" fullWidth variant="standard" />
+      <TextField id="additional-cost-duration" label="Duration" fullWidth variant="standard" />
+      <TextField id="additional-cost-cost" label="Cost" fullWidth variant="standard" />
+       <span className='addbtn'><AddIcon/></span>
+      </Box>
     </Box>
     </Paper>
     </>

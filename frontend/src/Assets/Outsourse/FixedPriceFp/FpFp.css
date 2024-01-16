@@ -1,0 +1,10 @@
+.addbtn{
+    border: 1px solid black;
+    border-radius: 50%  !important;
+    margin-top: 20px;
+    padding: 5px 4px 0px 4px;
+}
+.addbtn:hover{
+    background-color: hsla(223, 10%, 60%, 0.2);
+}
+

@@ -3,6 +3,7 @@ import "./Mainfeed.css"
 import { Box } from '@mui/material';
 import { FixedPriceFp, TimeFixed,TimeMTimeM,FixedTime, House , FixedPriceFpHybrid, FixedTimeHybrid, TimeFixedHybrid, TimeTimeHybrid } from '../../Assets';
 import Calculator from '../Calculatator/Calculator';
+import NoData from '../NoData/NoData';
 
 
 
@@ -22,6 +23,9 @@ const MainFeed: React.FunctionComponent<IMainFeedProps> = ({firstSelect,secondSe
     <Box className="BodyDiv">
     <br/>
     {/* <FixedPriceFp/> */}
+ 
+     {/* condition for no data select  */}
+     { secondSelect == "" && <NoData/>}
      {/* Out-Sourced   */}
      {selectModel== "Outsource" && firstSelect == "Fixed_Price" && secondSelect == "Fixed_Price" && <FixedPriceFp/>}
      { selectModel== "Outsource" && firstSelect == "Fixed_Price" && secondSelect == "Time_Material" && <FixedTime/>}

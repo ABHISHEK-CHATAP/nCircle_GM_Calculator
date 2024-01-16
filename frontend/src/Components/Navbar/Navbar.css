@@ -1,3 +1,5 @@
 #AppBar{
-    background-color: rgb(226, 228, 227);
+    /* background-color: rgb(226, 228, 227); */
+    z-index: 999;
+    position: relative;
 }
