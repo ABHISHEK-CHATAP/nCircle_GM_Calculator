@@ -93,6 +93,7 @@ const FixedPriceFp: React.FunctionComponent<IFixedPriceFpProps> = (_props) => {
       <TextField id="additional-cost-cost" label="Cost" fullWidth variant="standard" />
        <span className='addbtn'><AddIcon/></span>
       </Box>
+
     </Box>
     </Paper>
     </>
