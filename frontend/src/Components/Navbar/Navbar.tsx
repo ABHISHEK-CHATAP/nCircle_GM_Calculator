@@ -2,6 +2,7 @@ import * as React from 'react';
 import "./Navbar.css"
 import { AppBar, Toolbar, Typography ,Container} from '@mui/material';
 import logo from "../../Images/nCicle_logo-removebg-preview.png"
+import ToggleButton from '../toggle/ToggleButton';
 
 interface INavbarProps {
 }
@@ -13,7 +14,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = (_props) => {
     <>
       <AppBar position="static" id='AppBar'>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters sx={{display:"flex",justifyContent:"space-between"}}>
           <Typography
             variant="h6"
             noWrap
@@ -31,6 +32,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = (_props) => {
           >
            <img src={logo} width={200} height={50} style={{color:"#fff"}}/>
           </Typography>
+          <span><ToggleButton/></span>
         </Toolbar>
       </Container>
     </AppBar>

@@ -3,7 +3,7 @@ import "./Mainfeed.css"
 import { Box } from '@mui/material';
 import { FixedPriceFp, TimeFixed,TimeMTimeM,FixedTime, House , FixedPriceFpHybrid, FixedTimeHybrid, TimeFixedHybrid, TimeTimeHybrid } from '../../Assets';
 import Calculator from '../Calculatator/Calculator';
-import NoData from '../NoData/NoData';
+const NoData = React.lazy(()=> import('../NoData/NoData'));
 
 
 
@@ -25,7 +25,7 @@ const MainFeed: React.FunctionComponent<IMainFeedProps> = ({firstSelect,secondSe
     {/* <FixedPriceFp/> */}
  
      {/* condition for no data select  */}
-     { secondSelect == "" && <NoData/>}
+     {(selectModel== "" || firstSelect == "" || secondSelect == "") && <NoData selectModel={selectModel}/>}
      {/* Out-Sourced   */}
      {selectModel== "Outsource" && firstSelect == "Fixed_Price" && secondSelect == "Fixed_Price" && <FixedPriceFp/>}
      { selectModel== "Outsource" && firstSelect == "Fixed_Price" && secondSelect == "Time_Material" && <FixedTime/>}
@@ -38,7 +38,6 @@ const MainFeed: React.FunctionComponent<IMainFeedProps> = ({firstSelect,secondSe
      { selectModel== "Hybrid" && firstSelect == "Fixed_Price" && secondSelect == "Time_Material" && <FixedTimeHybrid/>}
      { selectModel== "Hybrid" && firstSelect == "Time_Material" && secondSelect == "Fixed_Price" && <TimeFixedHybrid/>}
      { selectModel== "Hybrid" && firstSelect == "Time_Material" && secondSelect == "Time_Material" && <TimeTimeHybrid/>}
-
 
    <Calculator/>
     </Box>
