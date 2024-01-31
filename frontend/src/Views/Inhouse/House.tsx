@@ -6,7 +6,7 @@ interface IHouseProps {
 const House: React.FunctionComponent<IHouseProps> = (_props) => {
   return(
     <>
-    <h1>IN-House</h1>
+    <h1>IN-Housee</h1>
     
     </>
   ) ;

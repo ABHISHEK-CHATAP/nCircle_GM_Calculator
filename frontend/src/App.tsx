@@ -1,58 +1,49 @@
 import * as React from "react";
-import SideBar from "./Components/Sidebar/Sidebar";
+import SideBar from "./Layouts/Sidebar/Sidebar.tsx";
 import { Container, CssBaseline, Grid } from "@mui/material";
-import MainFeed from "./Components/Mainfeed/Mainfeed";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
+import MainFeed from "./Layouts/Mainfeed/Mainfeed.tsx";
+import Navbar from "./Layouts/Navbar/Navbar.tsx";
+import Footer from "./Layouts/Footer/Footer.tsx";
 import { ThemeProvider } from "@mui/material/styles";
-import { useTheme } from "./Context/ThemeContext.tsx";
+import { useTheme } from "./Context/Context.tsx";
 
 interface IAppProps {}
 
-const App: React.FunctionComponent<IAppProps> = (_props) => {
+export const App: React.FunctionComponent<IAppProps> = (_props) => {
   const { darkTheme } = useTheme();
 
   const [selectModel, setSelectModel] = React.useState<String>("");
-
-  const [firstSelect, setFirstSelect] = React.useState<String>("");
-  const [secondSelect, setSecondSelect] = React.useState<String>("");
+  const [clientType, setClientType] = React.useState<String>("");
+  const [vendorType, setVendorType] = React.useState<String>("");
 
   return (
     <>
       {/* mui themeProvider   */}
       <ThemeProvider theme={darkTheme}>
         <CssBaseline />
+        {/* navbar  */}
         <Navbar />
-        <Container
-          maxWidth="xl"
-          sx={{
-            // bgcolor: "#2b2828",
-            height: "max-content",
-            position: "relative",
-            padding: "0px 0px 30px 0px",
-          }}
-        >
-          {/* <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} > */}
+        {/* body  */}
+        <Container  maxWidth="xl" sx={{ height:"100%", padding:"1rem 0rem"}} >
           <Grid container spacing={3}>
             <Grid item xs={3}>
               <SideBar
-                firstSelect={firstSelect}
-                setFirstSelect={setFirstSelect}
-                secondSelect={secondSelect}
-                setSecondSelect={setSecondSelect}
+                clientType={clientType}
+                setClientType={setClientType}
+                vendorType={vendorType}
+                setVendorType={setVendorType}
                 selectModel={selectModel}
                 setSelectModel={setSelectModel}
               />
             </Grid>
             <Grid item xs={9}>
               <MainFeed
-                firstSelect={firstSelect}
-                secondSelect={secondSelect}
+                clientType={clientType}
+                vendorType={vendorType}
                 selectModel={selectModel}
               />
             </Grid>
           </Grid>
-          {/* </Box> */}
         </Container>
         {/* footer  */}
         <Footer />
@@ -61,4 +52,3 @@ const App: React.FunctionComponent<IAppProps> = (_props) => {
   );
 };
 
-export default App;

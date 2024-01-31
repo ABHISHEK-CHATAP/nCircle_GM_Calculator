@@ -1,6 +1,5 @@
 import { AppBar, Container, Toolbar, Typography } from "@mui/material";
 import * as React from "react";
-import "./Footer.css";
 
 interface IFooterProps {}
 
@@ -10,7 +9,7 @@ const Footer: React.FunctionComponent<IFooterProps> = (_props) => {
       <AppBar
         position="static"
         id="footer"
-        sx={{ position: "relative", bottom: 0 }}
+        sx={{mt:3}}
       >
         <Container maxWidth="xl">
           <Toolbar

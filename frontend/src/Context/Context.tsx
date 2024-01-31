@@ -2,17 +2,17 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 import {  createTheme, Theme } from '@mui/material/styles';
 
 
-interface ThemeContextProps {
+interface ContextProps {
     darkTheme: Theme;
     setDarkMode: React.Dispatch<React.SetStateAction<boolean>> ;
     darkMode: boolean;
 }
 
-const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
+export const Context = createContext<ContextProps | undefined>(undefined);
 
 export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
+  const context = useContext(Context);
+  if (!context) { 
     throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
@@ -25,8 +25,8 @@ interface ThemeProviderProps {
   children: ReactNode;
 }
 
-export const ThemeContextProvider: React.FC<ThemeProviderProps> = ({ children }: ThemeProviderProps) => {
-    const [darkMode, setDarkMode] = useState(false);
+export const ContextProvider: React.FC<ThemeProviderProps> = ({ children }: ThemeProviderProps) => {
+    const [darkMode, setDarkMode] = useState<boolean>(false);
   
     const darkTheme = createTheme({
       palette: {
@@ -35,8 +35,8 @@ export const ThemeContextProvider: React.FC<ThemeProviderProps> = ({ children }:
     });
   
     return (
-      <ThemeContext.Provider value={{ darkTheme, setDarkMode, darkMode }}>
+      <Context.Provider value={{ darkTheme, setDarkMode, darkMode }}>
         {children}
-      </ThemeContext.Provider>
+      </Context.Provider>
     );
   };

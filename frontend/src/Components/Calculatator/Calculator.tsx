@@ -7,19 +7,16 @@ interface ICalculatorProps {
 const Calculator: React.FunctionComponent<ICalculatorProps> = (_props) => {
   return (
     <>
-    
     <Paper sx={{display:"flex", justifyContent:"space-between", alignItems:"center",padding:2,  mt:2 , }} elevation={10}>
         <Box sx={{display:"flex",gap:3, alignItems:"center"}}>
             <Button variant='contained'>Gross Margin %</Button>
             <span> = </span>
-            <TextField  variant="outlined" size='small' sx={{width:200}}/>
+            <TextField  variant="outlined" size='small' sx={{width:200}} disabled />
         </Box>
         <Box>
             <Button variant='contained'>clear</Button>
         </Box>
-        
     </Paper>
-    
     </>
   );
 };

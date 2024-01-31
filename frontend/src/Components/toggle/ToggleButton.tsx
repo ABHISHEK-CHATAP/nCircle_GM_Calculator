@@ -1,12 +1,11 @@
 import React from "react";
 import "./Toggle.css";
-import { useTheme } from "../../Context/ThemeContext";
+import { useTheme } from "../../Context/Context";
 
 interface IToggleButtonProps {}
 
 const ToggleButton: React.FC<IToggleButtonProps> = () => {
   const { darkMode, setDarkMode } = useTheme();
-
   return (
     <>
       <label className="switch">

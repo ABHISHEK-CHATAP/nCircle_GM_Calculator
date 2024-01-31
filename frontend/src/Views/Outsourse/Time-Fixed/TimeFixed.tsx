@@ -4,13 +4,14 @@ interface ITimeFixedProps {
 }
 
 const TimeFixed: React.FunctionComponent<ITimeFixedProps> = (_props) => {
-  return (
+  return(
     <>
     
-    <h1>Tm Fp</h1>
+   <h1> TnM and FP</h1>
+    
     
     </>
-  );
+  ) ;
 };
 
 export default TimeFixed;

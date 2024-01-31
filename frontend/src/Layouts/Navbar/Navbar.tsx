@@ -1,8 +1,7 @@
 import * as React from 'react';
-import "./Navbar.css"
 import { AppBar, Toolbar, Typography ,Container} from '@mui/material';
-import logo from "../../Images/nCicle_logo-removebg-preview.png"
-import ToggleButton from '../toggle/ToggleButton';
+import logo from "../../Assets/Images/nCircle_logo_1-removebg-preview.png"
+import ToggleButton from '../../Components/toggle/ToggleButton';
 
 interface INavbarProps {
 }
@@ -19,7 +18,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = (_props) => {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            // href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },

@@ -1,17 +1,10 @@
-.paperModel{
-/* position: absolute; */
-z-index: -1;
-}
+
 .importModel {
-  /* background-color: rgb(218, 218, 190); */
   padding: 40px 40px;
   height: 11vh;
-  /* position:sticky;
-  top: 0px; */
   margin-top: 25px;
   display: flex;
   justify-content: center;
-
 }
 .upload-btn {
   background-color: transparent;
@@ -28,13 +21,9 @@ z-index: -1;
 }
 
 .sidebarContainer {
-  /* background-color: rgb(237, 231, 231); */
   padding: 20px 55px;
   position: sticky;
   top: 20px;
-  /* height: 70vh  ; */
-  /* margin-top: 10px; */
-  /* border-right: 1px solid #1D5588; */
 }
 
 .sidebarItem {
